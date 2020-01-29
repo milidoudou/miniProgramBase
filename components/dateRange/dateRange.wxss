@@ -1,0 +1,38 @@
+/* components/dateRange/dateRange.wxss */
+date-range{
+  width: 100%;
+}
+.date-top{
+  width: 100%;
+  display: flex;
+}
+.date-cur{
+  flex: 1;
+  text-align: center;
+}
+.date-pre, .date-next{
+  width: 160rpx;
+  text-align: center;
+}
+.date-row{
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+.date-cell{
+  width: 60rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+}
+.date-cell.pre,.date-cell.next{
+  color: gray;
+}
+.date-cell.active{
+  background: red;
+  color: #fff;
+}
+.date-cell.checked{
+  background: blue;
+  color: #fff;
+}

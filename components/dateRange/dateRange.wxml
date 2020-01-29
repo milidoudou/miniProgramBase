@@ -1,0 +1,27 @@
+<!--components/dateRange/dateRange.wxml-->
+<view class="date-top">
+  <view class="date-pre" bindtap="handlePre">Pre</view>
+  <view class="date-cur">
+    {{cur.year}}年{{cur.month}}月{{cur.date}}
+  </view>
+  <view class="date-next" bindtap="handleNext">Next</view>
+</view>
+<view class="date-list">
+  <view 
+    class="date-row" 
+    wx:for="{{dataList}}" 
+    wx:for-item="item"
+    wx:for-index="index"
+    wx:key="item">
+    <view
+      bindtap="handleCheck"
+      data-value="{{subItem.value}}"
+      class="date-cell {{subItem.classNames}}" 
+      wx:for="{{item}}"
+      wx:for-item="subItem" 
+      wx:for-index="subIndex"
+      wx:key="subItem">
+      {{subItem.date}}
+    </view>
+  </view>
+</view>
